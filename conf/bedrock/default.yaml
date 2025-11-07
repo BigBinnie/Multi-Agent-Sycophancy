@@ -1,0 +1,24 @@
+# Bedrock configuration
+region_name: us-east-1
+
+# Include model configurations
+defaults:
+  - models/claude_sonnet@models.claude_sonnet
+  - models/claude_v2@models.claude_v2
+  - models/claude_haiku@models.claude_haiku
+  - models/claude_haiku_3_5@models.claude_haiku_3_5
+  - models/claude_sonnet_3_7@models.claude_sonnet_3_7
+  - models/llama31_70B@models.llama31_70B
+  - models/llama33_70B@models.llama33_70B
+  - models/deepseek_r1@models.deepseek_r1
+  - _self_
+
+# Models configuration structure
+models:
+  claude_sonnet: ???
+  claude_v2: ???
+  claude_haiku: ???
+  claude_haiku_3_5: ???
+  claude_sonnet_3_7: ???
+  llama31_70B: ???
+  deepseek_r1: ???

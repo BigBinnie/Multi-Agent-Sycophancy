@@ -1,0 +1,28 @@
+# MMLU Pro dataset prompt configuration
+name: "mmlu"
+description: "Configuration for MMLU Pro datasets with multiple-choice answers"
+task: "Your task is to carefully analyze the question and provided options, then select the most appropriate answer."
+# System prompt for the solver
+# system_prompt: >-
+#  You are a helpful assistant with expertise in answering multiple-choice questions.
+#  Your task is to carefully analyze the question and provided options, then select the most appropriate answer.
+#  Explain your answer step by step, and provide your final answer as a single letter in the format {{X}} at the end of your response, where X is the letter corresponding to your chosen option.
+#  For example, 'The answer is {{B}}.' Limit your output within 100 words.
+system_prompt: >-
+ You are a helpful assistant.
+ Your task is to carefully analyze the question and provided options, then select the most appropriate answer.
+# Answer pattern (regex to extract the answer)
+answer_pattern: "\\{\\{([A-Z])\\}\\}"
+
+# Answer format instruction
+answer_format_instruction: >-
+  Explain your answer step by step, Provide your final answer as a single letter 
+  in the format {{X}} at the end of your response, where X is the letter corresponding to your chosen option.
+  For example, 'The answer is {{B}}'. Limit your output within 100 words.
+
+# Your task is to carefully analyze the question and provided options, then select
+# the most appropriate answer.
+# Explain your reasoning step by step, and provide your final
+# answer as a single letter in the format {{X}}, where X is the
+# letter corresponding to your chosen option.
+# Explain your answer, putting the answer in the form {{X}} at the end of your response.

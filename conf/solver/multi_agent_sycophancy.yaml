@@ -1,0 +1,33 @@
+# Solver configuration with numbered sycophancy system prompts
+num_solvers: 2
+max_round: 2
+num_neighbors: 1
+
+# Solver type configuration
+solvers:
+  solver_a:
+    type: "sycophancy_1"  
+    model: "claude_haiku" # Model to use for this solver
+    model_type: "bedrock"  
+    enable_sycophancy: True
+    sycophancy_system_prompt_number: 1  # Use sycophancy system prompt #1
+  solver_b:
+    type: "sycophancy_2" 
+    model: "claude_sonnet_3_7"  # Model to use for this solver
+    model_type: "bedrock" 
+    enable_sycophancy: True
+    sycophancy_system_prompt_number: 1  # Use sycophancy system prompt #2
+
+sycophancy:
+  trigger:
+  system_prompt: 
+  instruction:
+  use_trigger: False
+
+# Example usage:
+# To use different numbered sycophancy prompts, set:
+# - enable_sycophancy: True
+# - sycophancy_system_prompt_number: 1-8 (corresponding to prompt_1.yaml through prompt_8.yaml)
+# 
+# The system will automatically load the corresponding prompt from:
+# conf/sycophancy_system_prompt/prompt_X.yaml where X is the number specified

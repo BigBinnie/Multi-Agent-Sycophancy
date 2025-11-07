@@ -1,0 +1,8 @@
+# GPT-4o Mini model configuration
+defaults:
+  - _base_
+
+model_id: gpt-4o-mini
+config:
+  maxTokenCount: 2048
+  temperature: 0.7

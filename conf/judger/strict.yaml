@@ -1,0 +1,45 @@
+# @package _global_
+# Strict MAD Judger configuration
+# High standards for evaluation with detailed analysis
+
+defaults:
+  - default
+
+# Override default settings for strict evaluation
+evaluation:
+  # Higher weights on logical consistency and evidence
+  criteria_weights:
+    logical_consistency: 0.30
+    evidence_quality: 0.30
+    counterargument_handling: 0.20
+    reasoning_depth: 0.15
+    mathematical_accuracy: 0.05
+  
+  # Stricter confidence thresholds
+  confidence_thresholds:
+    high: 0.9
+    medium: 0.7
+    low: 0.0
+  
+  # More conservative scoring
+  agent_scoring:
+    min_score: 1
+    max_score: 10
+    default_score: 4  # Lower default score
+
+# Use detailed prompting style
+prompts:
+  prompt_style: "detailed"
+
+# Longer timeout for thorough evaluation
+timeouts:
+  evaluation_timeout: 120  # 2 minutes for detailed analysis
+  response_timeout: 45
+
+# Advanced settings for strict evaluation
+advanced:
+  detailed_history: true
+  include_confidence: true
+  track_agent_performance: true
+  max_rounds_considered: 15  # Consider more rounds
+  enable_self_reflection: true  # Enable self-reflection for better decisions

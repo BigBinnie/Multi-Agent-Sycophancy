@@ -1,0 +1,42 @@
+# @package _global_
+output_dir: output
+output_prefix: math_multi_haiku_syco_solver_evaluation
+measure_confidence: false
+confidence_prompt: "How confident are you in your new answer? Please answer on a scale from 0% to 100%."
+
+# Timeout configurations (in seconds)
+round_timeout: 300  # 5 minutes per round
+batch_timeout: 120  # 2 minutes per batch
+individual_timeout: 30  # 30 seconds per individual request
+confidence_timeout: 30  # 30 seconds for confidence measurement
+
+data:
+  dataset: gsm8k_difficult
+  split: test
+  num_samples: 388
+  subset:
+  # Data partition configuration
+  partition:
+    partition_type: index
+    start_idx: 0
+    end_idx: 500
+# Default configuration for the project
+defaults:
+  - bedrock: default
+  - openai: default
+  - qwen: default
+  - llama: default
+  - solver: default  # Use the combined experiment configuration
+  - prompts: default
+  - judger: default  # MAD Judger configuration
+  - _self_
+
+# Hydra configuration
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  job:
+    chdir: false

@@ -1,0 +1,5 @@
+model_id: huggingface-llm-qwen2-5-32b-instruct
+config:
+  maxTokenCount: 2048
+  stopSequences: []
+  temperature: 0.7

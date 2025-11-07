@@ -1,0 +1,6 @@
+# Llama 3.1 70B model configuration
+model_id: meta-llama/Llama-3.1-70B-Instruct
+config:
+  maxTokenCount: 8192
+  stopSequences: []
+  temperature: 0.7

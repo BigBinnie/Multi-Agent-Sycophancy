@@ -1,0 +1,6 @@
+# Qwen 2 7B model configuration
+model_id: Qwen/Qwen2-7B-Instruct
+config:
+  maxTokenCount: 2048
+  stopSequences: []
+  temperature: 0.7

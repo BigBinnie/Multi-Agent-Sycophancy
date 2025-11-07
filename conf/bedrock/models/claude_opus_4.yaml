@@ -1,0 +1,7 @@
+# Claude Opus model configuration for blind agreement evaluation
+defaults:
+  - _base_
+
+model_id: anthropic.claude-opus-4-20250514-v1:0
+maxTokenCount: 2048
+temperature: 0

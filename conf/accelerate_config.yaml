@@ -1,0 +1,23 @@
+# Accelerate configuration for multi-GPU inference
+# This file configures how Accelerate should distribute your model across GPUs
+
+compute_environment: LOCAL_MACHINE
+distributed_type: MULTI_GPU
+downcast_bf16: 'no'
+gpu_ids: all  # Use all available GPUs, or specify like: '0,1' for specific GPUs
+machine_rank: 0
+main_training_function: main
+mixed_precision: bf16  # Use bfloat16 for better performance on modern GPUs
+num_machines: 1
+num_processes: 2  # Number of GPU processes (typically = number of GPUs)
+rdzv_backend: static
+same_network: true
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+use_cpu: false
+
+# Additional settings for better performance
+dynamo_backend: "no"  # Disable torch.compile for now
+fsdp_config: {}
+megatron_lm_config: {}

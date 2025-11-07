@@ -1,0 +1,5 @@
+model_id: us.deepseek.r1-v1:0
+config:
+  maxTokenCount: 1024
+  stopSequences: ["\n\nHuman:"]
+  temperature: 1

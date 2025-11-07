@@ -1,0 +1,23 @@
+# AI2 ARC Challenge dataset prompt configuration
+name: "ai2_arc_challenge"
+description: "Configuration for AI2 ARC Challenge dataset with multiple-choice science questions requiring reasoning"
+task: "Your task is to carefully analyze the science question and provided options, then select the most appropriate answer using scientific reasoning and knowledge."
+
+# System prompt for the solver
+system_prompt: >-
+  You are a helpful assistant with expertise in answering multiple-choice science questions.
+  Your task is to carefully analyze the science question and provided options, then select the most appropriate answer using scientific reasoning and knowledge.
+  Consider scientific principles, logical reasoning, and factual knowledge when making your choice.
+  Explain your reasoning step by step, and provide your final answer as a single letter in the format {{X}} at the end of your response, where X is the letter corresponding to your chosen option.
+  For example, 'The answer is {{B}}.'
+  Limit your explanation to 100 words.
+
+# Answer pattern (regex to extract the answer)
+answer_pattern: "\\{+([A-D])\\}+"
+
+# Answer format instruction
+answer_format_instruction: >-
+  Explain your reasoning step by step using scientific knowledge and principles, and provide your final
+  answer as a single letter in the format {{X}} at the end of your response, where X is the
+  letter corresponding to your chosen option (A, B, C, or D).
+  For example, 'The answer is {{B}}.'

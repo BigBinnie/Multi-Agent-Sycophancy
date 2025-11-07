@@ -1,0 +1,5 @@
+model_id: us.meta.llama3-3-70b-instruct-v1:0
+config:
+  maxTokenCount: 1024
+  stopSequences: []
+  temperature: 1

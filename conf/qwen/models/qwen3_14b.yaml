@@ -1,0 +1,6 @@
+# Qwen 2 1.5B model configuration
+model_id: Qwen/Qwen3-14B
+config:
+  maxTokenCount: 1024
+  stopSequences: []
+  temperature: 0.7

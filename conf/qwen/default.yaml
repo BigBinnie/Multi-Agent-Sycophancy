@@ -1,0 +1,16 @@
+# Qwen configuration for Huggingface models
+
+# Include model configurations
+defaults:
+  - models/qwen2_7b@models.qwen2_7b
+  - models/qwen2_1_5b@models.qwen2_1_5b
+  - models/qwen3_32b@models.qwen3_32b
+  - models/qwen3_14b@models.qwen3_14b
+  - _self_
+
+# Models configuration structure
+models:
+  qwen2_7b: ???
+  qwen2_1_5b: ???
+  qwen3_32b: ???
+  qwen3_14b: ???

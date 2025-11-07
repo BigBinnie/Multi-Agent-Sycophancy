@@ -1,0 +1,5 @@
+# Claude V2 model configuration
+defaults:
+  - _base_
+
+model_id: anthropic.claude-v2:1

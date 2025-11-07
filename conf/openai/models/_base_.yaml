@@ -1,0 +1,8 @@
+# Base OpenAI model configuration
+model_id: null  # Will be overridden by specific model configs
+config:
+  maxTokenCount: 4096
+  stopSequences: []
+  temperature: 0.7
+api_key: null  # Will use OPENAI_API_KEY environment variable if not specified
+base_url: null  # Will use default OpenAI endpoint if not specified

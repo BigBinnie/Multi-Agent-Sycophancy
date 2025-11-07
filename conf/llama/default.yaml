@@ -1,0 +1,18 @@
+# Llama configuration for Huggingface models
+
+# Include model configurations
+defaults:
+  - models/llama3_2_1b@models.llama3_2_1b
+  - models/llama3_2_3b@models.llama3_2_3b
+  - models/llama3_1_8b@models.llama3_1_8b
+  - models/llama3_1_70b@models.llama3_1_70b
+  - models/llama3_3_70b@models.llama3_3_70b
+  - _self_
+
+# Models configuration structure
+models:
+  llama3_2_1b: ???
+  llama3_2_3b: ???
+  llama3_1_8b: ???
+  llama3_1_70b: ???
+  llama3_3_70b: ???

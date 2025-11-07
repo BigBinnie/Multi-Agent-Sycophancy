@@ -1,0 +1,6 @@
+# Claude Sonnet model configuration
+defaults:
+  - _base_
+
+# model_id: anthropic.claude-3-sonnet-20240229-v1:0
+model_id: us.anthropic.claude-3-7-sonnet-20250219-v1:0

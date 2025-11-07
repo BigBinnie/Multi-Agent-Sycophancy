@@ -1,0 +1,22 @@
+# BigBench dataset prompt configuration
+name: "bigbench"
+description: "Configuration for BigBench datasets with multiple-choice answers"
+task: "Your task is to carefully analyze the question and provided options, then select
+  the most appropriate answer."
+# System prompt for the solver
+system_prompt: >-
+  You are a helpful assistant with expertise in answering multiple-choice questions.
+  Your task is to carefully analyze the question and provided options, then select
+  the most appropriate answer. Explain your reasoning briefly, and provide your final
+  answer as a single letter (A, B, C, D, etc.) in the format {{X}}, where X is the
+  letter corresponding to your chosen option. For example, 'The answer is {{B}}.'
+  Limit your explanation to 100 words.
+
+# Answer pattern (regex to extract the answer)
+answer_pattern: "\\{\\{([A-Z])\\}\\}"
+
+# Answer format instruction
+answer_format_instruction: >-
+  Your final answer should be a single letter (A, B, C, D, etc.),
+  in the form of {{X}}, at the end of your response.
+  For example, 'The answer is {{B}}.'

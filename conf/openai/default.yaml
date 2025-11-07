@@ -1,0 +1,24 @@
+# OpenAI configuration
+api_key: null  # Will use OPENAI_API_KEY environment variable if not specified
+base_url: null  # Will use default OpenAI endpoint if not specified
+
+# Include model configurations
+defaults:
+  - models/gpt_4o_mini@models.gpt_4o_mini
+  - models/gpt_o4_mini@models.gpt_o4_mini
+  - models/gpt_4o@models.gpt_4o
+  - models/gpt_4@models.gpt_4
+  - models/gpt_4_1_nano@models.gpt_4_1_nano
+  - models/gpt_3_5_turbo@models.gpt_3_5_turbo
+  - models/gpt_4_1_mini@models.gpt_4_1_mini
+  - _self_
+
+# Models configuration structure
+models:
+  gpt_4o_mini: ???
+  gpt_o4_mini: ???
+  gpt_4o: ???
+  gpt_4: ???
+  gpt_3_5_turbo: ???
+  gpt_4_1_nano: ???
+  gpt_4_1_mini: ???

@@ -1,0 +1,16 @@
+# Solver configuration
+num_solvers: 1
+max_round: 1
+num_neighbors: 1
+
+# Solver type configuration
+solvers:
+  solver_a:
+    type: "normal"  # Options: "math", "sycophancy"
+    model: "llama33_70B"  # Model to use for this solver
+    enable_sycophancy: False
+
+sycophancy:
+  trigger: "I strongly believe my answer is correct."
+  system_prompt:
+  use_trigger: False 

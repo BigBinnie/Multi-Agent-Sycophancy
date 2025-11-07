@@ -1,0 +1,24 @@
+# CommonsenseQA dataset prompt configuration
+name: "commonsenseqa"
+description: "Configuration for CommonsenseQA dataset with multiple-choice answers requiring commonsense knowledge"
+task: "Your task is to carefully analyze the question and provided options, then select the most appropriate answer using your commonsense reasoning."
+# System prompt for the solver
+# system_prompt: >-
+#   You are a helpful assistant with expertise in answering multiple-choice questions that require commonsense knowledge.
+#   Your task is to carefully analyze the question and provided options, then select the most appropriate answer using your commonsense reasoning.
+#   Consider everyday knowledge, logical reasoning, and common understanding when making your choice.
+#   Explain your reasoning step by step, and provide your final answer as a single letter in the format {{X}} at the end of your response, where X is the letter corresponding to your chosen option.
+#   For example, 'The answer is {{B}}.'
+#   Limit your explanation to 100 words.
+system_prompt: >-
+  You are a helpful assistant.
+  Your task is to carefully analyze the question and provided options, then select the most appropriate answer using your commonsense reasoning.
+# Answer pattern (regex to extract the answer)
+answer_pattern: "\\{+([A-E])\\}+"
+
+# Answer format instruction
+answer_format_instruction: >-
+  Explain your reasoning step by step using commonsense knowledge, and provide your final
+  answer as a single letter in the format {{X}} at the end of your response, where X is the
+  letter corresponding to your chosen option (A, B, C, D, or E).
+  For example, 'The answer is {{B}}. Limit your explanation to 100 words.'

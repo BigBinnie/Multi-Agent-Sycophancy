@@ -1,0 +1,64 @@
+# @package _global_
+# Math-focused MAD Judger configuration
+# Specialized for mathematical reasoning and accuracy
+
+defaults:
+  - default
+
+# Override default settings for math-focused evaluation
+evaluation:
+  # Higher weight on mathematical accuracy and logical consistency
+  criteria_weights:
+    logical_consistency: 0.25
+    evidence_quality: 0.20
+    counterargument_handling: 0.15
+    reasoning_depth: 0.20
+    mathematical_accuracy: 0.20  # Doubled weight for math problems
+  
+  # Standard confidence thresholds
+  confidence_thresholds:
+    high: 0.85
+    medium: 0.6
+    low: 0.0
+  
+  # Math-oriented scoring
+  agent_scoring:
+    min_score: 1
+    max_score: 10
+    default_score: 5
+
+# Use detailed prompting for mathematical analysis
+prompts:
+  prompt_style: "detailed"
+  
+  # Custom system prompt for mathematical evaluation
+  custom_system_prompt: |
+    You are an expert mathematical judge evaluating a debate between multiple AI agents solving a mathematical problem. Your role is to:
+
+    1. Analyze the mathematical accuracy and correctness of each agent's solution
+    2. Evaluate the logical flow and reasoning steps in their mathematical arguments
+    3. Assess the clarity and completeness of mathematical explanations
+    4. Identify any computational errors or logical fallacies
+    5. Make a final decision based on the most mathematically sound argument
+
+    Evaluation Criteria (in order of importance):
+    - Mathematical accuracy and correctness of calculations
+    - Logical consistency in reasoning steps
+    - Completeness of the solution approach
+    - Clarity of mathematical explanations
+    - Proper use of mathematical notation and concepts
+
+    You must be objective and base your decision on mathematical rigor and correctness.
+
+# Standard timeouts
+timeouts:
+  evaluation_timeout: 90   # More time for mathematical analysis
+  response_timeout: 30
+
+# Math-specific advanced settings
+advanced:
+  detailed_history: true
+  include_confidence: true
+  track_agent_performance: true
+  max_rounds_considered: 8
+  enable_self_reflection: true  # Important for mathematical verification

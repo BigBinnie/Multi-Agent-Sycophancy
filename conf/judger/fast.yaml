@@ -1,0 +1,45 @@
+# @package _global_
+# Fast MAD Judger configuration
+# Optimized for speed with concise evaluation
+
+defaults:
+  - default
+
+# Override default settings for fast evaluation
+evaluation:
+  # Simplified criteria weights
+  criteria_weights:
+    logical_consistency: 0.40
+    evidence_quality: 0.30
+    counterargument_handling: 0.15
+    reasoning_depth: 0.10
+    mathematical_accuracy: 0.05
+  
+  # More lenient confidence thresholds
+  confidence_thresholds:
+    high: 0.7
+    medium: 0.4
+    low: 0.0
+  
+  # Standard scoring
+  agent_scoring:
+    min_score: 1
+    max_score: 10
+    default_score: 6  # Higher default score for faster decisions
+
+# Use concise prompting style
+prompts:
+  prompt_style: "concise"
+
+# Shorter timeouts for speed
+timeouts:
+  evaluation_timeout: 30   # 30 seconds for quick evaluation
+  response_timeout: 15     # 15 seconds for response
+
+# Simplified advanced settings
+advanced:
+  detailed_history: false          # Skip detailed formatting
+  include_confidence: true
+  track_agent_performance: false   # Skip performance tracking
+  max_rounds_considered: 5         # Consider fewer rounds
+  enable_self_reflection: false    # Skip self-reflection for speed

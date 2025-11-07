@@ -1,0 +1,78 @@
+# MAD Judger configuration
+# Configuration for Multi-Agent Debate Judger
+
+# Enable/disable judger functionality
+enabled: true
+
+# Judger model configuration
+model:
+  # Model to use for judger (will use first available model if not specified)
+  model_name: "claude_haiku"  # Options: claude_haiku, claude_sonnet, gpt_4o, etc.
+  model_type: "bedrock"  # Options: bedrock, openai, qwen, llama
+  
+# Judger evaluation settings
+evaluation:
+  # Evaluation criteria weights (0.0 to 1.0)
+  criteria_weights:
+    logical_consistency: 0.25
+    evidence_quality: 0.25
+    counterargument_handling: 0.20
+    reasoning_depth: 0.20
+    mathematical_accuracy: 0.10
+  
+  # Confidence thresholds for decision making
+  confidence_thresholds:
+    high: 0.8
+    medium: 0.5
+    low: 0.0
+  
+  # Agent scoring range
+  agent_scoring:
+    min_score: 1
+    max_score: 10
+    default_score: 5
+
+# Judger prompt configuration
+prompts:
+  # System prompt style
+  prompt_style: "standard"  # Options: standard, detailed, concise
+  
+  # Custom system prompt (overrides prompt_style if provided)
+  custom_system_prompt: null
+  
+  # Sycophancy system prompt number (1-8, overrides other prompt settings if provided)
+  sycophancy_system_prompt_number: null
+  
+  # Evaluation format template
+  evaluation_format: |
+    DECISION: [Your final answer following the specified format]
+    REASONING: [Detailed explanation of your decision, analyzing each agent's contributions]
+    CONFIDENCE: [High/Medium/Low - your confidence in this decision]
+    AGENT_SCORES: [Rate each agent from 1-10 based on argument quality]
+
+# Timeout settings (in seconds)
+timeouts:
+  evaluation_timeout: 60  # Maximum time for judger evaluation
+  response_timeout: 30    # Maximum time for judger response processing
+
+# Fallback behavior when judger fails
+fallback:
+  strategy: "majority_vote"  # Options: majority_vote, first_response, random
+  enable_logging: true       # Log fallback usage for analysis
+
+# Advanced judger settings
+advanced:
+  # Enable detailed debate history formatting
+  detailed_history: true
+  
+  # Include confidence scores in evaluation
+  include_confidence: true
+  
+  # Enable agent performance tracking
+  track_agent_performance: true
+  
+  # Maximum debate rounds to consider
+  max_rounds_considered: 10
+  
+  # Enable judger self-reflection
+  enable_self_reflection: false
