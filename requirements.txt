@@ -110,7 +110,7 @@ packaging==25.0
 pandas==2.3.0
 partial-json-parser==0.2.1.1.post6
 pfzy==0.3.4
-pillow==11.2.1
+pillow==11.3.0
 plotly==6.2.0
 prometheus-fastapi-instrumentator==7.1.0
 prometheus_client==0.22.1
